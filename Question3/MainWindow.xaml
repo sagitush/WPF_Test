@@ -1,0 +1,24 @@
+﻿<Window x:Class="Question3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Question2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Name="MyButton" Click="MyButton_Click"  Content="START"  Height="40" Width="100" Margin="220,280,450,81"/>
+        <!--Command="{Binding MyDelegate}"  --> 
+        <StackPanel Orientation="Horizontal" Width="762" Height="85" Margin="18,41,14,293">
+            <TextBlock Text="URL:" Margin="0,30,50,0"/>
+            <TextBox x:Name="MyTextBox"  Width="500" Height="30" FontSize="25"
+                     Text="{Binding URL, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0,28,0,27"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Width="762" Height="85" Margin="18,169,12,165">
+            <TextBlock Text="Size:" Margin="0,30,50,0"/>
+            <TextBlock x:Name="MyTextBlock"  Width="200" Height="30" FontSize="25"
+                     Text="{Binding Size, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0,28,0,27"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
